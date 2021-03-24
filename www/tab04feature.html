@@ -55,6 +55,10 @@
         xhr.onload = function () {
           if (xhr.status >= 200 && xhr.status < 300) {
             console.log("success!", JSON.parse(xhr.responseText));
+            var jstore = xhr.responseText;
+            var store = JSON.parse(jstore);
+            var fim = store[0].capital
+            document.getElementById("pais2").innerHTML = fim;
           } else {
             let error_message = "Ops! Erro!!!<br>" + xhr.statusText;
           } //if
@@ -80,7 +84,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <a class="navbar-brand" href="#"
+      <a class="navbar-brand" id="pais2" href="#"
         >&#x1F981; Digite um país para saber sua capital (Em inglês):
       </a>
 
