@@ -58,7 +58,7 @@
             var jstore = xhr.responseText;
             var store = JSON.parse(jstore);
             var fim = store[0].capital
-            document.getElementById("pais2").innerHTML = fim;
+            document.getElementById("respostaPais").innerHTML = "A capital é: " + fim;
           } else {
             let error_message = "Ops! Erro!!!<br>" + xhr.statusText;
           } //if
@@ -109,7 +109,7 @@
       <hr />
       <h1>
         <span class="badge badge-success" id="respostaPais"
-          >Projeto do aluno!!</span
+          ></span
         >
       </h1>
       <p>
