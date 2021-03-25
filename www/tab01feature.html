@@ -85,15 +85,16 @@
         </div>
         <div id="btnCat" class="col-sm center-txt"><b onclick="getFotoCat()">Gato<br><span class="icon-font"> &#128049;</span></b>
         </div>
-        <div id="btnFox"class="col-sm center-txt"><b onclick=''>Raposa<br><span class="icon-font">&#129418;</span></b>
+        <div id="btnFox"class="col-sm center-txt"><b onclick='getFotoFox()'>Raposa<br><span class="icon-font">&#129418;</span></b>
         </div>
         <div class="col-sm center-txt"><b onclick=''>Surpresa<br><span class="icon-font">&#127881;</span></b>
         </div>
     </div>
 
 </nav>
-
+<img id="photoCat" src="https:\/\/purr.objects-us-east-1.dream.io\/i\/screenshot-2017-12-19instagrampostbymotherrussianov6,2014at938amutc4.png" alt="">
 <img id="photoDog" src="https:\/\/dog.ceo\/api\/img\/deerhound-scottish\/n02092002_6780.jpg" alt="">
+<img id="photoFox" src= "https:\/\/randomfox.ca\/images\/104.jpg" alt="">
 
 
 <script>
@@ -120,7 +121,7 @@
     }
 </script>
 
-<img id="photoCat" src="https:\/\/purr.objects-us-east-1.dream.io\/i\/screenshot-2017-12-19instagrampostbymotherrussianov6,2014at938amutc4.png" alt="">
+
 
 <script>
     function getFotoCat()
@@ -140,6 +141,31 @@
   }
   
   xhr.open('GET', 'https://aws.random.cat/meow');
+  xhr.send();
+});
+         
+    }
+</script>
+
+
+<script>
+    function getFotoFox()
+    {
+        const btn = document.querySelector('#btnFox');
+        const img = document.querySelector('#photoFox');
+        btn.addEventListener('click', function() {
+        const xhr = new XMLHttpRequest();
+  
+        xhr.onreadystatechange = function() {
+        if(xhr.readyState == 4 && xhr.status == 200) {
+            const url = JSON.parse(xhr.responseText).message;
+            img.src = url;
+        } else {
+            console.log('Error');
+         }
+  }
+  
+  xhr.open('GET', 'https://randomfox.ca/floof/');
   xhr.send();
 });
          
