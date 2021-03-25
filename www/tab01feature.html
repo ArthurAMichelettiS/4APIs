@@ -38,9 +38,14 @@
         .icon-font {
             font-size: 40px;   
         }
-        main {
+        .main {
             padding-top: 56px;
             padding-bottom: 50px;
+        }
+        .img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
     </STYLE>
     <SCRIPT>
@@ -71,7 +76,7 @@
 
     <main class="container" id="aluno">
         <hr>
-        <h1><span class="badge badge-success">Projeto do aluno!!<br>Features 1</span></h1>
+        <h1><span id="Surpresa" class="badge badge-success">Projeto do aluno!!<br>Features 1</span></h1>
         <p><a href="https://github.com/public-apis/public-apis" target="_apis">Lista de APIs públicas</a></p>
     </main>
 
@@ -87,14 +92,13 @@
         </div>
         <div id="btnFox"class="col-sm center-txt"><b onclick='getFotoFox()'>Raposa<br><span class="icon-font">&#129418;</span></b>
         </div>
-        <div class="col-sm center-txt"><b onclick=''>Surpresa<br><span class="icon-font">&#127881;</span></b>
+        <div id = "btnSurpresa" class="col-sm center-txt"><b onclick='getSurpresa()'>Surpresa<br><span class="icon-font">&#127881;</span></b>
         </div>
     </div>
 
 </nav>
 
-<img id="photo" src="" alt="" >
-
+<img id="photo" src="" alt=""  class="center" >
 
 
 <script>
@@ -172,7 +176,51 @@
     }
 </script>
 
-    <nav class="navbar fixed-bottom navbar-light bg-light width-button-bar">
+<script>
+    function getSurpresa()
+    {
+        /* const btn = document.querySelector('#btnSurpresa');
+        var apiUrl = 'https://badadvice.rest/api/random';
+        fetch(apiUrl).then(response => {
+        return response.json();
+         }).then(data => {
+        console.log(data);
+        }).catch(err => {
+        });
+        window.alert(apiUrl.responseText); */
+
+      /*   let jsondata;    
+        fetch('https://badadvice.rest/api/random').then(
+        function(u){ return u.json();}
+        ).then(
+        function(json){
+          jsondata = json;
+        }      
+      )
+      window.alert(jsondata); */
+        
+
+        var xhr = new XMLHttpRequest();
+
+        xhr.onload = function () {
+          if (xhr.status >= 200 && xhr.status < 300) {
+            console.log("success!", JSON.parse(xhr.responseText));
+            var jstore = xhr.responseText;
+            var store = JSON.parse(jstore);
+            var fim = store[0].advice
+            document.getElementById("Surpresa").innerHTML = fim;
+          } else {
+            let error_message = "Ops! Erro!!!<br>" + xhr.statusText;
+          } 
+        };
+
+        xhr.open("GET","https://badadvice.rest/api/random");
+        xhr.send();
+      
+    }
+</script>
+
+    <nav class="navbar fixed-bottom navbar-light bg-light width-button-bar" ;>
        
         <div class="row w-100 bottom-button-bar">
             <div class="col-sm center-txt button-selected"><b onclick='window.location="tab01feature.html"'>Feature 1<br><span class="icon-font">&#x1f4f0;</span></b>
