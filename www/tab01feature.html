@@ -93,16 +93,15 @@
 
 </nav>
 
-<img id="photoDog" src="https:\/\/dog.ceo\/api\/img\/deerhound-scottish\/n02092002_6780.jpg" alt="">
-<img id="photoCat" src="https:\/\/purr.objects-us-east-1.dream.io\/i\/P8170121_2.jpg" alt="">
-<img id="photoFox" src= "https:\/\/randomfox.ca\/images\/95.jpg" alt="">
+<img id="photo" src="" alt="" >
+
 
 
 <script>
     function getFotoDog()
     {
         const btn = document.querySelector('#btnDog');
-        const img = document.querySelector('#photoDog');
+        const img = document.querySelector('#photo');
         btn.addEventListener('click', function() {
         const xhr = new XMLHttpRequest();
   
@@ -128,7 +127,7 @@
     function getFotoCat()
     {
         const btn = document.querySelector('#btnCat');
-        const img = document.querySelector('#photoCat');
+        const img = document.querySelector('#photo');
         btn.addEventListener('click', function() {
         const xhr = new XMLHttpRequest();
   
@@ -153,7 +152,7 @@
     function getFotoFox()
     {
         const btn = document.querySelector('#btnFox');
-        const img = document.querySelector('#photoFox');
+        const img = document.querySelector('#photo');
         btn.addEventListener('click', function() {
         const xhr = new XMLHttpRequest();
   
