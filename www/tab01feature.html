@@ -92,9 +92,10 @@
     </div>
 
 </nav>
-<img id="photoCat" src="https:\/\/purr.objects-us-east-1.dream.io\/i\/screenshot-2017-12-19instagrampostbymotherrussianov6,2014at938amutc4.png" alt="">
+
 <img id="photoDog" src="https:\/\/dog.ceo\/api\/img\/deerhound-scottish\/n02092002_6780.jpg" alt="">
-<img id="photoFox" src= "https:\/\/randomfox.ca\/images\/104.jpg" alt="">
+<img id="photoCat" src="https:\/\/purr.objects-us-east-1.dream.io\/i\/P8170121_2.jpg" alt="">
+<img id="photoFox" src= "https:\/\/randomfox.ca\/images\/95.jpg" alt="">
 
 
 <script>
@@ -133,7 +134,7 @@
   
         xhr.onreadystatechange = function() {
         if(xhr.readyState == 4 && xhr.status == 200) {
-            const url = JSON.parse(xhr.responseText).message;
+            const url = JSON.parse(xhr.responseText).file;
             img.src = url;
         } else {
             console.log('Error');
@@ -158,7 +159,7 @@
   
         xhr.onreadystatechange = function() {
         if(xhr.readyState == 4 && xhr.status == 200) {
-            const url = JSON.parse(xhr.responseText).message;
+            const url = JSON.parse(xhr.responseText).image;
             img.src = url;
         } else {
             console.log('Error');
