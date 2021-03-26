@@ -38,6 +38,9 @@
         .icon-font {
             font-size: 40px;   
         }
+        .navbar-nav>li:hover{
+            cursor: pointer;
+    }
         main {
             padding-top: 56px;
             padding-bottom: 50px;
@@ -76,7 +79,6 @@
         <p><a href="https://github.com/public-apis/public-apis" target="_apis">Lista de APIs públicas</a></p>
     </main>
 
-
 <nav class="navbar navbar-light bg-light width-button-bar">
 
     <div class="navbar-nav nav-fill w-100 flex-md-row">
@@ -87,13 +89,11 @@
         </div>
         <div id="btnFox"class="col-sm center-txt"><b onclick='getFotoFox()'>Raposa<br><span class="icon-font">&#129418;</span></b>
         </div>
-        <div id = "btnSurpresa" class="col-sm center-txt"><b onclick='getSurpresa()'>Surpresa<br><span class="icon-font">&#127881;</span></b>
-        </div>
     </div>
 
 </nav>
 
-<img id="photo" src="" alt=""  class="center" >
+<center><img id="photo" src="" alt=""></center>
 
 
 <script>
@@ -171,49 +171,6 @@
     }
 </script>
 
-<script>
-    function getSurpresa()
-    {
-        /* const btn = document.querySelector('#btnSurpresa');
-        var apiUrl = 'https://badadvice.rest/api/random';
-        fetch(apiUrl).then(response => {
-        return response.json();
-         }).then(data => {
-        console.log(data);
-        }).catch(err => {
-        });
-        window.alert(apiUrl.responseText); */
-
-      /*   let jsondata;    
-        fetch('https://badadvice.rest/api/random').then(
-        function(u){ return u.json();}
-        ).then(
-        function(json){
-          jsondata = json;
-        }      
-      )
-      window.alert(jsondata); */
-        
-
-        var xhr = new XMLHttpRequest();
-
-        xhr.onload = function () {
-          if (xhr.status >= 200 && xhr.status < 300) {
-            console.log("success!", JSON.parse(xhr.responseText));
-            var jstore = xhr.responseText;
-            var store = JSON.parse(jstore);
-            var fim = store[0].advice
-            document.getElementById("Surpresa").innerHTML = fim;
-          } else {
-            let error_message = "Ops! Erro!!!<br>" + xhr.statusText;
-          } 
-        };
-
-        xhr.open("GET","https://badadvice.rest/api/random");
-        xhr.send();
-      
-    }
-</script>
 
     <nav class="navbar fixed-bottom navbar-light bg-light width-button-bar" ;>
        
