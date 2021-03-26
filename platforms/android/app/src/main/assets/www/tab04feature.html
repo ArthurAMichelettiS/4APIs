@@ -59,21 +59,32 @@
             var store = JSON.parse(jstore);
             var capital = store[0].capital;
             var continente = store[0].region;
-            var codTel = store[0].callingCodes;
             var timeZones = store[0].timezones;
-            var population = store[0].population;
-            var latitude = store[0].latlng[0];
-            var longitude = store[0].latlng[1];
-            var currency = store[0].currencies[0].name;
-            var symbol = store[0].currencies[0].symbol;
             document.getElementById("respostaPais").innerHTML = "A capital é: " + capital;
             document.getElementById("continente").innerHTML = "Continente: " + continente;
-            document.getElementById("cod").innerHTML = "Código de área telefônico: +" + codTel;
             document.getElementById("fusos").innerHTML = "Fuso(s) horário(s): " + timeZones;
-            document.getElementById("pop").innerHTML = "População: " + population;
-            document.getElementById("lat").innerHTML = "Latitude: " + latitude;
-            document.getElementById("lng").innerHTML = "Longitude: " + longitude;
-            document.getElementById("moeda").innerHTML = "Moeda: " + currency + " " + symbol;
+          } else {
+            let error_message = "Ops! Erro!!!<br>" + xhr.statusText;
+          } //if
+        };
+
+        xhr.open("GET", url);
+        xhr.send();
+      }
+      function getCovidCases() {
+        var query = document.getElementById("pais");
+        
+        url = "https://covid-api.mmediagroup.fr/v1/cases?country=" + query.value;
+
+        var xhr = new XMLHttpRequest();
+
+        xhr.onload = function () {
+          if (xhr.status >= 200 && xhr.status < 300) {
+            console.log("success!", JSON.parse(xhr.responseText));
+            var jstore = xhr.responseText;
+            var store = JSON.parse(jstore);
+            var covidCases = store[0].confirmed;
+            document.getElementById("covid").innerHTML = "Casos de covid: " + covidCases;
           } else {
             let error_message = "Ops! Erro!!!<br>" + xhr.statusText;
           } //if
@@ -104,7 +115,7 @@
       </a>
 
       <input type="text" id="pais" name="pais" /><br /><br />
-      <button onclick="getPais()">Pesquisar</button>
+      <button onclick="getPais(), getCovidCases()">Pesquisar</button>
 
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <div class="navbar-nav float-right text-right pr-3">
@@ -125,12 +136,8 @@
       <h1>
         <span class="badge badge-warning" id="respostaPais"><!--Texto com a caital do país--></span><br><br>
         <p style="font-size:15px" id="continente"><!--Texto com o continente--></p>
-        <p style="font-size:15px" id="cod"><!--Texto com código de telefone--></p>
-        <p style="font-size:15px" id="fusos"><!--Texto com o(s) fuso(s)--></p>
-        <p style="font-size:15px" id="pop"><!--Texto com a população--></p>
-        <p style="font-size:15px" id="lat"><!--Texto com a latitude--></p>
-        <p style="font-size:15px" id="lng"><!--Texto com a longitude--></p>
-        <p style="font-size:15px" id="moeda"><!--Texto com a moedae--></p>
+        <p style="font-size:15px" id="fusos"></p>
+        <p style="font-size:15px" id="covid"></p>
       </h1>
     </main>
 
