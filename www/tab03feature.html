@@ -79,7 +79,115 @@
                     document.getElementById("respostaEUR").innerHTML = "1 Dólar = " + USDEUR + " Euros (União Européia)";
                     document.getElementById("respostaBRL").innerHTML = "1 Dólar = " + USDBRL + " Reais Brasileiros";
                     document.getElementById("respostaGBP").innerHTML = "1 Dólar = " + USDGBP + " Libras Esterlinas (Reino Unido)";
-                    document.getElementById("respostaCNY").innerHTML = "1 Dólar = " + USDCNY + " Yuans (Chineses";
+                    document.getElementById("respostaCNY").innerHTML = "1 Dólar = " + USDCNY + " Yuans Chineses";
+                } else {
+                    let error_message = "Ops! Erro!!!<br>" + xhr.statusText;
+                } //if
+            };
+
+            xhr.open("GET", url);
+            xhr.send();
+        }
+
+        function getEUR() {
+            url = "https://v6.exchangerate-api.com/v6/c9462c770c521f4f8d534a78/latest/EUR";
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.onload = function() {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    console.log("success!", JSON.parse(xhr.responseText));
+                    var jstore = xhr.responseText;
+                    var store = JSON.parse(jstore);
+                    var EURUSD = store.conversion_rates.USD
+                    var EURBRL = store.conversion_rates.BRL
+                    var EURGBP = store.conversion_rates.GBP
+                    var EURCNY = store.conversion_rates.CNY
+                    document.getElementById("respostaEUR").innerHTML = "1 Euro = " + EURUSD + " Dólares Estadunidenses";
+                    document.getElementById("respostaBRL").innerHTML = "1 Euro = " + EURBRL + " Reais Brasileiros";
+                    document.getElementById("respostaGBP").innerHTML = "1 Euro = " + EURGBP + " Libras Esterlinas (Reino Unido)";
+                    document.getElementById("respostaCNY").innerHTML = "1 Euro = " + EURCNY + " Yuans Chineses";
+                } else {
+                    let error_message = "Ops! Erro!!!<br>" + xhr.statusText;
+                } //if
+            };
+
+            xhr.open("GET", url);
+            xhr.send();
+        }
+
+        function getBRL() {
+            url = "https://v6.exchangerate-api.com/v6/c9462c770c521f4f8d534a78/latest/BRL";
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.onload = function() {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    console.log("success!", JSON.parse(xhr.responseText));
+                    var jstore = xhr.responseText;
+                    var store = JSON.parse(jstore);
+                    var BRLEUR = store.conversion_rates.EUR
+                    var BRLUSD = store.conversion_rates.USD
+                    var BRLGBP = store.conversion_rates.GBP
+                    var BRLCNY = store.conversion_rates.CNY
+                    document.getElementById("respostaEUR").innerHTML = "1 Real = " + BRLEUR + " Euros (União Européia)";
+                    document.getElementById("respostaBRL").innerHTML = "1 Real = " + BRLUSD + " Dólares Estadunidenses";
+                    document.getElementById("respostaGBP").innerHTML = "1 Real = " + BRLGBP + " Libras Esterlinas (Reino Unido)";
+                    document.getElementById("respostaCNY").innerHTML = "1 Real = " + BRLCNY + " Yuans Chineses";
+                } else {
+                    let error_message = "Ops! Erro!!!<br>" + xhr.statusText;
+                } //if
+            };
+
+            xhr.open("GET", url);
+            xhr.send();
+        }
+
+        function getGBP() {
+            url = "https://v6.exchangerate-api.com/v6/c9462c770c521f4f8d534a78/latest/GBP";
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.onload = function() {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    console.log("success!", JSON.parse(xhr.responseText));
+                    var jstore = xhr.responseText;
+                    var store = JSON.parse(jstore);
+                    var GPBEUR = store.conversion_rates.EUR
+                    var GPBBRL = store.conversion_rates.BRL
+                    var GBPUSD = store.conversion_rates.USD
+                    var GBPCNY = store.conversion_rates.CNY
+                    document.getElementById("respostaEUR").innerHTML = "1 Libra = " + GPBEUR + " Euros (União Européia)";
+                    document.getElementById("respostaBRL").innerHTML = "1 Libra = " + GPBBRL + " Reais Brasileiros";
+                    document.getElementById("respostaGBP").innerHTML = "1 Libra = " + GBPUSD + " Dólares Estadunidenses";
+                    document.getElementById("respostaCNY").innerHTML = "1 Libra = " + GBPCNY + " Yuans Chineses";
+                } else {
+                    let error_message = "Ops! Erro!!!<br>" + xhr.statusText;
+                } //if
+            };
+
+            xhr.open("GET", url);
+            xhr.send();
+        }
+
+        function getCNY() {
+            url = "https://v6.exchangerate-api.com/v6/c9462c770c521f4f8d534a78/latest/CNY";
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.onload = function() {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    console.log("success!", JSON.parse(xhr.responseText));
+                    var jstore = xhr.responseText;
+                    var store = JSON.parse(jstore);
+                    var CNYEUR = store.conversion_rates.EUR
+                    var CNYBRL = store.conversion_rates.BRL
+                    var CNYGBP = store.conversion_rates.GBP
+                    var CNYUSD = store.conversion_rates.USD
+                    document.getElementById("respostaEUR").innerHTML = "1 Yuan = " + CNYEUR + " Euros (União Européia)";
+                    document.getElementById("respostaBRL").innerHTML = "1 Yuan = " + CNYBRL + " Reais Brasileiros";
+                    document.getElementById("respostaGBP").innerHTML = "1 Yuan = " + CNYGBP + " Libras Esterlinas (Reino Unido)";
+                    document.getElementById("respostaCNY").innerHTML = "1 Yuan = " + CNYUSD + " Dólares Estadunidenses";
                 } else {
                     let error_message = "Ops! Erro!!!<br>" + xhr.statusText;
                 } //if
@@ -102,9 +210,11 @@
 
         <div class="navbar-nav nav-fill w-100 flex-lg-row ">
 
-            <button class="button" onclick="getUSD()">Dólar Americano</button>
+            <button class="button" onclick="getUSD()">Dólar Estadunidense</button>
             <button class="button" onclick="getEUR()">Euro</button>
             <button class="button" onclick="getBRL()">Real Brasileiro</button>
+            <button class="button" onclick="getGBP()">Libra Esterlina</button>
+            <button class="button" onclick="getCNY()">Yuan Chinês</button>
 
         </div>
 
