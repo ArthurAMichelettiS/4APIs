@@ -6,41 +6,71 @@
     <script src="js/bootstrap.bundle.js"></script>-->
     <title>FTT EC LP2 N1!!</title>
     <link rel="stylesheet" href="css/bootstrap.css" />
-    <style>
+    <STYLE>
       .center-txt {
-        text-align: center;
-        color: black;
-        width: 90px;
-        padding: 4px;
-        margin: 0;
-        border: 0;
+          text-align: center;
+          color: black;
+          width: 90px;
+          padding: 4px;
+          margin: 0;
+          border: 0;
       }
+      
+      .button {
+          background-color: #272e35;
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          border-radius: 15px;
+          margin-right: 15px;
+      }
+      
       .button-selected {
-        background-color: #343a40;
-        color: white;
-        border-radius: 15px;
+          background-color: #343a40;
+          color: white;
+          padding: 15px 32px;
+          border-radius: 15px;
       }
+      
       .width-button-bar {
-        text-align: center;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin-right: 0;
-        margin-left: 0;
+          text-align: center;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          margin-right: 0;
+          margin-left: 0;
       }
+      
       .bottom-button-bar {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        width: 100%;
+          margin: 0;
+          padding: 0;
+          border: 0;
+          width: 100%;
       }
+      
       .icon-font {
-        font-size: 40px;
+          font-size: 40px;
       }
+      .container img {
+          max-width:700px;
+          max-height:800px;
+          width: auto;
+          height: auto;
+      }  
+      .margem img {
+          max-width:400px;
+          max-height:500px;
+          width: auto;
+          height: auto;
+      }              
       main {
-        padding-top: 56px;
-        padding-bottom: 50px;
+          padding-top: 56px;
+          padding-bottom: 50px;
       }
-    </style>
+  </STYLE>
     <script>
       function getPais() {
         var query = document.getElementById("pais");
@@ -104,7 +134,7 @@
       </a>
 
       <input type="text" id="pais" name="pais" /><br /><br />
-      <button onclick="getPais()">Pesquisar</button>
+      <button class="button" onclick="getPais()">Pesquisar</button>
 
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <div class="navbar-nav float-right text-right pr-3">
@@ -134,15 +164,24 @@
       </h1>
     </main>
 
-    <nav class="navbar fixed-bottom navbar-light bg-light width-button-bar">
+    <div class="container">
+      <p>
+          <img src="img/world.png" alt= "transferencia-internacional" style="position:absolute;float:right;right:40px;bottom:80px;z-index:2;">
+      </p>
+  </div>
+
+    <nav class="navbar fixed-bottom navbar-light bg-light width-button-bar" ;>
+       
       <div class="row w-100 bottom-button-bar">
-          <div class="col-sm center-txt"><b onclick='window.location="tab01feature.html"'>Feature 1<br><span class="icon-font">&#x1f4f0;</span></b>
+          <div class="col-sm center-txt"><b onclick='window.location="tab01feature.html"'>Animais fofos<br><span class="icon-font">&#x1f98a;</span></b>
           </div>
           <div class="col-sm center-txt"><b onclick='window.location="tab02feature.html"'>Feature 2<br><span class="icon-font">&#x1f4cc;</span></b>
           </div>
-          <div class="col-sm center-txt"><b onclick='window.location="tab03feature.html"'>Feature 3<br><span class="icon-font">&#x1F4DD;</span></b>
+          <div class="col-sm center-txt"><b onclick='window.location="tab03feature.html"'>Câmbio<br><span class="icon-font">&#128177;</span></b>
           </div>
-          <div class="col-sm center-txt button-selected"><b onclick='window.location="tab04feature.html"'>Busca de países<br><span class="icon-font">&#x1F981;</span></b></div>
+          <div class="col-sm center-txt  button-selected"><b onclick='window.location="tab04feature.html"'>Capitais do Mundo<br><span class="icon-font">&#128506;</span></b>
+          </div>
+          <br>
       </div>
     </nav>
   </body>

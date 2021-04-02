@@ -55,7 +55,18 @@
         .icon-font {
             font-size: 40px;
         }
-        
+        .container img {
+            max-width:800px;
+            max-height:700px;
+            width: auto;
+            height: auto;
+        }  
+        .margem img {
+            max-width:400px;
+            max-height:500px;
+            width: auto;
+            height: auto;
+        }              
         main {
             padding-top: 56px;
             padding-bottom: 50px;
@@ -227,31 +238,40 @@
         </div>
     </nav>
 
-
+    <div class="container">
+        <p>
+            <img src="img/cambio.png" alt= "transferencia-internacional" style="position:absolute;float:right;right:40px;bottom:80px;z-index:2;">
+        </p>
+    </div>
 
     <main class="container" id="aluno">
         <hr/>
         <h1>
-            <p style="font-size:15px" id="respostaBRL"></p>
-            <p style="font-size:15px" id="respostaEUR"></p>
-            <p style="font-size:15px" id="respostaGBP"></p>
-            <p style="font-size:15px" id="respostaCNY"></p>
-            <p style="font-size:15px" id="respostaUSD"></p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p style="font-size:30px" id="respostaBRL"></p>
+            <p style="font-size:30px" id="respostaEUR"></p>
+            <p style="font-size:30px" id="respostaGBP"></p>
+            <p style="font-size:30px" id="respostaCNY"></p>
+            <p style="font-size:30px" id="respostaUSD"></p>
         </h1>
     </main>
-
-    <nav class="navbar fixed-bottom navbar-light bg-light width-button-bar">
+    <nav class="navbar fixed-bottom navbar-light bg-light width-button-bar" ;>
+       
         <div class="row w-100 bottom-button-bar">
-            <div class="col-sm center-txt"><b onclick='window.location="tab01feature.html"'>Feature 1<br><span class="icon-font">&#x1f4f0;</span></b>
+            <div class="col-sm center-txt"><b onclick='window.location="tab01feature.html"'>Animais fofos<br><span class="icon-font">&#x1f98a;</span></b>
             </div>
             <div class="col-sm center-txt"><b onclick='window.location="tab02feature.html"'>Feature 2<br><span class="icon-font">&#x1f4cc;</span></b>
             </div>
-            <div class="col-sm center-txt button-selected"><b onclick='window.location="tab03feature.html"'>Feature 3<br><span class="icon-font">&#x1F4DD;</span></b>
+            <div class="col-sm center-txt  button-selected"><b onclick='window.location="tab03feature.html"'>Câmbio<br><span class="icon-font">&#128177;</span></b>
             </div>
-            <div class="col-sm center-txt"><b onclick='window.location="tab04feature.html"'>Feature 4<br><span class="icon-font">&#x1F981;</span></b>
+            <div class="col-sm center-txt"><b onclick='window.location="tab04feature.html"'>Capitais do Mundo<br><span class="icon-font">&#128506;</span></b>
             </div>
         </div>
     </nav>
+    
 </BODY>
 <!-- carga de scripts do Bootstrap, JQuery, Popper -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
