@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- A biblioteca bundle já contem os arquivos JS do Bootstrap, Popper, e jQuery.
     <script src="js/bootstrap.bundle.js"></script>-->
-    <title>FTT EC LP2 N1!!</title>
+    <title>FTT EC LP3 N2!!</title>
     <LINK REL="stylesheet" HREF="css/bootstrap.css" />
     <STYLE>
         .center-txt {
@@ -136,72 +136,72 @@
 <script>
     function getFotoDog()
     {
-        const btn = document.querySelector('#btnDog');
+        //const btn = document.querySelector('#btnDog'); 
         const img = document.querySelector('#photo');
-        btn.addEventListener('click', function() {
-        const xhr = new XMLHttpRequest();
-  
-        xhr.onreadystatechange = function() {
-        if(xhr.readyState == 4 && xhr.status == 200) {
-            const url = JSON.parse(xhr.responseText).message;
-            img.src = url;
-        } else {
-            console.log('Error');
-         }
-  }
-  
-  xhr.open('GET', 'https://dog.ceo/api/breeds/image/random');
-  xhr.send();
-});
-         
+        //btn.addEventListener('click', function() {
+            const xhr = new XMLHttpRequest();
+    
+            xhr.onreadystatechange = function() {
+            if(xhr.readyState == 4 && xhr.status == 200) {
+                const url = JSON.parse(xhr.responseText).message;
+                img.src = url;
+                } else {
+                    console.log('Error');
+                }
+            }
+        
+            xhr.open('GET', 'https://dog.ceo/api/breeds/image/random');
+            xhr.send();
+        //});
+
     }
 </script>
-
 <script>
     function getFotoCat()
     {
-        const btn = document.querySelector('#btnCat');
+        //const btn = document.querySelector('#btnCat');
         const img = document.querySelector('#photo');
-        btn.addEventListener('click', function() {
-        const xhr = new XMLHttpRequest();
-  
-        xhr.onreadystatechange = function() {
-        if(xhr.readyState == 4 && xhr.status == 200) {
-            const url = JSON.parse(xhr.responseText).file;
-            img.src = url;
-        } else {
-            console.log('Error');
-         }
-  }
-  
-  xhr.open('GET', 'https://aws.random.cat/meow');
-  xhr.send();
-});
-         
+        //btn.addEventListener('click', function() {
+            const xhr = new XMLHttpRequest();
+    
+            xhr.onreadystatechange = function() {
+                if(xhr.readyState == 4 && xhr.status == 200) {
+                    const url = JSON.parse(xhr.responseText).file;
+                    img.src = url;
+                } else {
+                    console.log('Error');
+                }
+            }
+        
+            xhr.open('GET', 'https://aws.random.cat/meow');
+            xhr.send();
+        //});
+            
     }
 </script>
+
 
 
 <script>
     function getFotoFox()
     {
-        const btn = document.querySelector('#btnFox');
+        //const btn = document.querySelector('#btnFox');
         const img = document.querySelector('#photo');
-        btn.addEventListener('click', function() {
-        const xhr = new XMLHttpRequest();
-  
-        xhr.onreadystatechange = function() {
-        if(xhr.readyState == 4 && xhr.status == 200) {
-            const url = JSON.parse(xhr.responseText).image;
-            img.src = url;
-        } else {
-            console.log('Error');
-         }
-  }
-  
-  xhr.open('GET', 'https://randomfox.ca/floof/');
-  xhr.send();
-});
+        //btn.addEventListener('click', function() {
+            const xhr = new XMLHttpRequest();
+    
+            xhr.onreadystatechange = function() {
+                if(xhr.readyState == 4 && xhr.status == 200) {
+                    const url = JSON.parse(xhr.responseText).image;
+                    img.src = url;
+                } else {
+                    console.log('Error');
+                }
+            }
+    
+            xhr.open('GET', 'https://randomfox.ca/floof/');
+            xhr.send();
+        //});
          
     }
 </script>
@@ -210,7 +210,7 @@
         <div class="row w-100 bottom-button-bar">
             <div class="col-sm center-txt button-selected"><b onclick='window.location="tab01feature.html"'>Animais fofos<br><span class="icon-font">&#x1f98a;</span></b>
             </div>
-            <div class="col-sm center-txt"><b onclick='window.location="tab02feature.html"'>Feature 2<br><span class="icon-font">&#x1f4cc;</span></b>
+            <div class="col-sm center-txt"><b onclick='window.location="tab02feature.html"'>Frases<br><span class="icon-font">&#128214;</span></b>
             </div>
             <div class="col-sm center-txt"><b onclick='window.location="tab03feature.html"'>Câmbio<br><span class="icon-font">&#128177;</span></b>
             </div>

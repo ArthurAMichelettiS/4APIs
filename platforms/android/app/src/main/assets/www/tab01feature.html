@@ -5,64 +5,112 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- A biblioteca bundle já contem os arquivos JS do Bootstrap, Popper, e jQuery.
     <script src="js/bootstrap.bundle.js"></script>-->
-    <title>FTT EC LP2 N1!!</title>
+    <title>FTT EC LP3 N2!!</title>
     <LINK REL="stylesheet" HREF="css/bootstrap.css" />
-    <STYLE>   
+    <STYLE>
         .center-txt {
             text-align: center;
             color: black;
             width: 90px;
             padding: 4px;
-            margin:0;
-            border:0;
+            margin: 0;
+            border: 0;
         }
+        
+        .button {
+            background-color: #272e35;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 15px;
+            margin-right: 15px;
+        }
+        
         .button-selected {
             background-color: #343a40;
             color: white;
+            padding: 15px 32px;
             border-radius: 15px;
-        }       
+        }
+        
         .width-button-bar {
             text-align: center;
             padding-top: 5px;
             padding-bottom: 5px;
             margin-right: 0;
             margin-left: 0;
-            
         }
+        
         .bottom-button-bar {
-            margin:0;
-            padding:0;
-            border:0;
+            margin: 0;
+            padding: 0;
+            border: 0;
             width: 100%;
         }
+        
         .icon-font {
-            font-size: 40px;   
+            font-size: 40px;
         }
-        .navbar-nav>li:hover{
-            cursor: pointer;
-    }
+        .icon-font-button {
+            font-size: 20px;
+        }
+        .container img {
+            max-width:1000px;
+            max-height:1200px;
+            width: auto;
+            height: auto;
+        }  
+        .margem img {
+            max-width:400px;
+            max-height:500px;
+            width: auto;
+            height: auto;
+        }              
         main {
             padding-top: 56px;
             padding-bottom: 50px;
         }
-
     </STYLE>
-    <SCRIPT>
-
-
-
-    </SCRIPT>
 </HEAD>
 
 <BODY lang="pt-br">
     
-
+    <div class="margem">
+        <p>
+            <img src="img/cat.png" style="position:absolute;float:left;left:40px;bottom:80px;z-index:2;">
+        </p>
+    </div>
+    
+    <div class="margem">
+        <p>
+            <img src="img/dog.png" style="position:absolute;float:left;left:40px;bottom:450px;z-index:2;">
+        </p>
+    </div>
+    
+    <div class="margem">
+        <p>
+            <img src="img/fox.png" style="position:absolute;float:right;right:20px;bottom:80px;z-index:2;">
+        </p>
+    </div>
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <a class="navbar-brand" href="#">&#x1F981; FTT EC LP3 1B N2!!!</a>
+        <a class="navbar-brand" href="#">&#x1F408; Para melhorar o dia com fofura!</a>
+
+        <div class="navbar-nav nav-fill w-100 flex-lg-row ">
+
+            <button id="btnDog" class="button" onclick="getFotoDog()">Cachorro<span class="icon-font-button">&#128054;</span></button>
+            <button id="btnCat" class="button" onclick="getFotoCat()">Gato<span class="icon-font-button"> &#128049;</span></button>
+            <button id="btnFox" class="button" onclick="getFotoFox()">Raposa<span class="icon-font-button">&#129418;</span></button>
+
+        </div>
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <div class="navbar-nav float-right text-right pr-3">
@@ -74,114 +122,99 @@
     </nav>
 
     <main class="container" id="aluno">
-        <hr>
-        <h1><span class="badge badge-success">Para melhorar o dia<br>com fofura</span></h1>
-        <p><a href="https://github.com/public-apis/public-apis" target="_apis">Lista de APIs públicas</a></p>
     </main>
 
-<nav class="navbar navbar-light bg-light width-button-bar">
-
-    <div class="navbar-nav nav-fill w-100 flex-md-row">
-        
-        <div id="btnDog" class="col-sm center-txt"><b onclick="getFotoDog()">Cachorro<br><span class="icon-font">&#128054;</span></b>
-        </div>
-        <div id="btnCat" class="col-sm center-txt"><b onclick="getFotoCat()">Gato<br><span class="icon-font"> &#128049;</span></b>
-        </div>
-        <div id="btnFox"class="col-sm center-txt"><b onclick='getFotoFox()'>Raposa<br><span class="icon-font">&#129418;</span></b>
-        </div>
-    </div>
 
 </nav>
 
-<center><img id="photo" src="" alt=""></center> 
-
+<div class="container">
+    <p>
+        <center><img id="photo" src="" alt=""></center>
+    </p>
+</div>
 
 <script>
     function getFotoDog()
     {
-        const btn = document.querySelector('#btnDog');
+        //const btn = document.querySelector('#btnDog'); 
         const img = document.querySelector('#photo');
-        btn.addEventListener('click', function() {
-        const xhr = new XMLHttpRequest();
-  
-        xhr.onreadystatechange = function() {
-        if(xhr.readyState == 4 && xhr.status == 200) {
-            const url = JSON.parse(xhr.responseText).message;
-            img.src = url;
-        } else {
-            console.log('Error');
-         }
-  }
-  
-  xhr.open('GET', 'https://dog.ceo/api/breeds/image/random');
-  xhr.send();
-});
-         
+        //btn.addEventListener('click', function() {
+            const xhr = new XMLHttpRequest();
+    
+            xhr.onreadystatechange = function() {
+            if(xhr.readyState == 4 && xhr.status == 200) {
+                const url = JSON.parse(xhr.responseText).message;
+                img.src = url;
+                } else {
+                    console.log('Error');
+                }
+            }
+        
+            xhr.open('GET', 'https://dog.ceo/api/breeds/image/random');
+            xhr.send();
+        //});
+
     }
 </script>
-
-
-
 <script>
     function getFotoCat()
     {
-        const btn = document.querySelector('#btnCat');
+        //const btn = document.querySelector('#btnCat');
         const img = document.querySelector('#photo');
-        btn.addEventListener('click', function() {
-        const xhr = new XMLHttpRequest();
-  
-        xhr.onreadystatechange = function() {
-        if(xhr.readyState == 4 && xhr.status == 200) {
-            const url = JSON.parse(xhr.responseText).file;
-            img.src = url;
-        } else {
-            console.log('Error');
-         }
-  }
-  
-  xhr.open('GET', 'https://aws.random.cat/meow');
-  xhr.send();
-});
-         
+        //btn.addEventListener('click', function() {
+            const xhr = new XMLHttpRequest();
+    
+            xhr.onreadystatechange = function() {
+                if(xhr.readyState == 4 && xhr.status == 200) {
+                    const url = JSON.parse(xhr.responseText).file;
+                    img.src = url;
+                } else {
+                    console.log('Error');
+                }
+            }
+        
+            xhr.open('GET', 'https://aws.random.cat/meow');
+            xhr.send();
+        //});
+            
     }
 </script>
+
 
 
 <script>
     function getFotoFox()
     {
-        const btn = document.querySelector('#btnFox');
+        //const btn = document.querySelector('#btnFox');
         const img = document.querySelector('#photo');
-        btn.addEventListener('click', function() {
-        const xhr = new XMLHttpRequest();
-  
-        xhr.onreadystatechange = function() {
-        if(xhr.readyState == 4 && xhr.status == 200) {
-            const url = JSON.parse(xhr.responseText).image;
-            img.src = url;
-        } else {
-            console.log('Error');
-         }
-  }
-  
-  xhr.open('GET', 'https://randomfox.ca/floof/');
-  xhr.send();
-});
+        //btn.addEventListener('click', function() {
+            const xhr = new XMLHttpRequest();
+    
+            xhr.onreadystatechange = function() {
+                if(xhr.readyState == 4 && xhr.status == 200) {
+                    const url = JSON.parse(xhr.responseText).image;
+                    img.src = url;
+                } else {
+                    console.log('Error');
+                }
+            }
+    
+            xhr.open('GET', 'https://randomfox.ca/floof/');
+            xhr.send();
+        //});
          
     }
 </script>
-
-
     <nav class="navbar fixed-bottom navbar-light bg-light width-button-bar" ;>
        
         <div class="row w-100 bottom-button-bar">
-            <div class="col-sm center-txt button-selected"><b onclick='window.location="tab01feature.html"'>Feature 1<br><span class="icon-font">&#x1f4f0;</span></b>
+            <div class="col-sm center-txt button-selected"><b onclick='window.location="tab01feature.html"'>Animais fofos<br><span class="icon-font">&#x1f98a;</span></b>
             </div>
-            <div class="col-sm center-txt"><b onclick='window.location="tab02feature.html"'>Feature 2<br><span class="icon-font">&#x1f4cc;</span></b>
+            <div class="col-sm center-txt"><b onclick='window.location="tab02feature.html"'>Frases<br><span class="icon-font">&#128214;</span></b>
             </div>
-            <div class="col-sm center-txt"><b onclick='window.location="tab03feature.html"'>Feature 3<br><span class="icon-font">&#x1F4DD;</span></b>
+            <div class="col-sm center-txt"><b onclick='window.location="tab03feature.html"'>Câmbio<br><span class="icon-font">&#128177;</span></b>
             </div>
-            <div class="col-sm center-txt"><b onclick='window.location="tab04feature.html"'>Feature 4<br><span class="icon-font">&#x1F981;</span></b>
+            <div class="col-sm center-txt"><b onclick='window.location="tab04feature.html"'>Capitais do Mundo<br><span class="icon-font">&#128506;</span></b>
             </div>
         </div>
     </nav>
