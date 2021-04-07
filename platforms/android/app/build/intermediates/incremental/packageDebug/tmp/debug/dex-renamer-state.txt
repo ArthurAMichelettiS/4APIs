@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-#Tue Apr 06 21:02:26 BRT 2021
+#Tue Apr 06 23:25:33 BRT 2021
 base.0=C\:\\Users\\lance\\Downloads\\exemp n2 daniel\\trb cdv\\4APIs\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
-=======
-#Tue Apr 06 22:07:11 BRT 2021
-base.0=C\:\\Users\\muniz\\Documents\\GitHub\\4APIs\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
->>>>>>> d513d40cb53f842b9bc28a101478f411ad20313a
 path.0=classes.dex
 renamed.0=classes.dex
