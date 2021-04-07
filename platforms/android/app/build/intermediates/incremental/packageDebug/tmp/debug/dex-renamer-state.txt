@@ -1,4 +1,4 @@
-#Tue Apr 06 19:09:44 BRT 2021
-base.0=C\:\\Users\\lance\\Downloads\\exemp n2 daniel\\trb cdv\\4APIs\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+#Tue Apr 06 22:07:11 BRT 2021
+base.0=C\:\\Users\\muniz\\Documents\\GitHub\\4APIs\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

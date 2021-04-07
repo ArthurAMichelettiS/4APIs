@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/estilos.css" />
     <STYLE>
         .icon-font-button {
-            font-size: 20px;
+            font-size: 30px;
         }
 
         .container img {
@@ -21,14 +21,15 @@
         }
 
         .margem img {
-            max-width: 400px;
-            max-height: 500px;
+            max-width: 200px;
+            max-height: 300px;
             width: auto;
             height: auto;
         }
         .navbar {
             z-index: 1;
         }
+
         main {
             padding-top: 56px;
             padding-bottom: 50px;
@@ -46,19 +47,19 @@
 
     <div class="margem">
         <p>
-            <img src="img/cat.png" style="position:fixed;bottom: 10%;z-index:2;width: 30%;">
+            <img src="img/cat.png" style="position:fixed;bottom: 20%; left: 40%; z-index:2;width: 30%;" onclick="getFotoCat()">
         </p>
     </div>
 
     <div class="margem">
         <p>
-            <img src="img/dog.png" style="position:fixed;top: 0%;z-index:2;width: 30%;">
+            <img src="img/dog.png" style="position:fixed;bottom: 20%;left: 5%; z-index:2;width: 30%;" onclick="getFotoDog()">
         </p>
     </div>
 
     <div class="margem">
         <p>
-            <img src="img/fox.png" style="position:fixed;right: 0%;bottom: 10%;z-index:2;width: 30%;">
+            <img src="img/fox.png" style="position:fixed;right: 0%;bottom: 20%;z-index:2;width: 30%;"onclick="getFotoFox()">
         </p>
     </div>
 
@@ -67,19 +68,14 @@
             aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
+       
         <a class="navbar-brand" href="#">&#x1F408; Melhorando o dia com fofura!</a>
-        
-        <div class="navbar-nav nav-fill w-100 navbar width-button-bar">
+        <a class="navbar-brand" href="#">&#128021; Clique em um animal!</a>
 
-            <button id="btnDog" class="button" onclick="getFotoDog()">Cachorro<span class="icon-font-button">&#128054;</span></button>
-            <button id="btnCat" class="button" onclick="getFotoCat()">Gato<span class="icon-font-button"> &#128049;</span></button>
-            <button id="btnFox" class="button" onclick="getFotoFox()">Raposa<span class="icon-font-button">&#129418;</span></button>
-
-        </div>
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <div class="navbar-nav float-right text-right pr-3">
+            <div class="navbar-nav float-right text-right pr-3 flex-lg-row">
+
                 <a class="nav-item nav-link" href="index.html">Splash</a>
                 <a class="nav-item nav-link" href="http://www.fundacaosalvadorarena.org.br/" target="newpage">CEFSA</a>
                 <a class="nav-item nav-link" href="about.html">Sobre</a>
@@ -95,7 +91,7 @@
 
     <div class="container">
         <p>
-            <center><img id="photo" src="" alt="" style="z-index:2;width: 30%;"></center>
+            <center><img id="photo" src="" alt="" style="z-index:2;"></center>
         </p>
     </div>
 

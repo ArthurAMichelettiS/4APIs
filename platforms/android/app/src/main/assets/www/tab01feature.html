@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/estilos.css" />
     <STYLE>
         .icon-font-button {
-            font-size: 20px;
+            font-size: 30px;
         }
 
         .container img {
@@ -21,10 +21,13 @@
         }
 
         .margem img {
-            max-width: 400px;
-            max-height: 500px;
+            max-width: 200px;
+            max-height: 300px;
             width: auto;
             height: auto;
+        }
+        .navbar {
+            z-index: 1;
         }
 
         main {
@@ -44,19 +47,19 @@
 
     <div class="margem">
         <p>
-            <img src="img/cat.png" style="position:absolute;float:left;left:40px;bottom:80px;z-index:2;width: 30%;">
+            <img src="img/cat.png" style="position:fixed;bottom: 20%; left: 40%; z-index:2;width: 30%;" onclick="getFotoCat()">
         </p>
     </div>
 
     <div class="margem">
         <p>
-            <img src="img/dog.png" style="position:absolute;float:left;left:40px;bottom:450px;z-index:2;width: 30%;">
+            <img src="img/dog.png" style="position:fixed;bottom: 20%;left: 5%; z-index:2;width: 30%;" onclick="getFotoDog()">
         </p>
     </div>
 
     <div class="margem">
         <p>
-            <img src="img/fox.png" style="position:absolute;float:right;right:20px;bottom:80px;z-index:2;width: 30%;">
+            <img src="img/fox.png" style="position:fixed;right: 0%;bottom: 20%;z-index:2;width: 30%;"onclick="getFotoFox()">
         </p>
     </div>
 
@@ -65,11 +68,14 @@
             aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
+       
         <a class="navbar-brand" href="#">&#x1F408; Melhorando o dia com fofura!</a>
-                                                   
+        <a class="navbar-brand" href="#">&#128021; Clique em um animal!</a>
+
+
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <div class="navbar-nav float-right text-right pr-3">
+            <div class="navbar-nav float-right text-right pr-3 flex-lg-row">
+
                 <a class="nav-item nav-link" href="index.html">Splash</a>
                 <a class="nav-item nav-link" href="http://www.fundacaosalvadorarena.org.br/" target="newpage">CEFSA</a>
                 <a class="nav-item nav-link" href="about.html">Sobre</a>
@@ -80,26 +86,12 @@
     <main class="container" id="aluno">
     </main>
 
-
     </nav>
 
-
-    <nav class="navbar navbar-light bg-light width-button-bar">
-
-        <div class="navbar-nav nav-fill w-100 flex-md-row">
-            
-            <div id="btnDog" class="col-sm center-txt" style="position: center;"><b onclick="getFotoDog()">Cachorro<br><span class="icon-font">&#128054;</span></b>
-            </div>
-            <div id="btnCat" class="col-sm center-txt"><b onclick="getFotoCat()">Gato<br><span class="icon-font"> &#128049;</span></b>
-            </div>
-            <div id="btnFox"class="col-sm center-txt"><b onclick='getFotoFox()'>Raposa<br><span class="icon-font">&#129418;</span></b>
-            </div>
-        </div>
-    </nav>
 
     <div class="container">
         <p>
-            <center><img id="photo" src="" alt=""></center>
+            <center><img id="photo" src="" alt="" style="z-index:2;"></center>
         </p>
     </div>
 
