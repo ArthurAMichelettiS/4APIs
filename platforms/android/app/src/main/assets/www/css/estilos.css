@@ -1,10 +1,11 @@
 .center-txt {
     text-align: center;
     color: black;
-    width: 90px;
+    width: 25%;
     padding: 4px;
     margin: 0;
     border: 0;
+    font-size: small;
 }
 
 .button {
@@ -43,5 +44,5 @@
 }
 
 .icon-font {
-    font-size: 35px;
+    font-size: 30px;
 }

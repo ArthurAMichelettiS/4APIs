@@ -1,17 +1,18 @@
 .center-txt {
     text-align: center;
     color: black;
-    width: 90px;
+    width: 25%;
     padding: 4px;
     margin: 0;
     border: 0;
+    font-size: small;
 }
 
 .button {
     background-color: #272e35;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 10px 1%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -43,5 +44,5 @@
 }
 
 .icon-font {
-    font-size: 35px;
+    font-size: 30px;
 }
