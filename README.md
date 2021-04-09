@@ -12,22 +12,22 @@ Kaian   RA: 081180022
 
 APIs utilizadas: https://dog.ceo/dog-api/, http://random.cat/, https://randomfox.ca/
 
-<img src="img_animais.png">
+<img src="img_animais.png" width="450">
 
 # API de Frases
 
 API utilizada: https://pprathameshmore.github.io/QuoteGarden/
 
-<img src="img_frases.png">
+<img src="img_frases.png" width="450">
 
 # API de Cotações
 
 API utilizada: https://www.exchangerate-api.com/
 
-<img src="img_cotacao.png">
+<img src="img_cotacao.png" width="450">
 
 # API de Capitais
 
 API utilizada: https://restcountries.eu/
 
-<img src="img_capitais.png">
+<img src="img_capitais.png" width="450">
